@@ -1,0 +1,45 @@
+.cards-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Scroll oldini oladi */
+}
+
+.cards-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateCards 10s linear infinite;
+}
+
+.card {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Animatsiya */
+@keyframes rotateCards {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover bo‘lganda animatsiyani to‘xtatish */
+.cards-container:hover .cards-wrapper {
+  animation-play-state: paused;
+}

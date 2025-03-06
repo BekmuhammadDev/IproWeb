@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  background-color: black;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.montserrat {
+  font-family: "Montserrat";
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* .marque-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: -50px;
+    display: flex;
+    gap:50px;
+    
+} */
+
+.moving-text {
+  display: inline-block;
+  animation: moveText 15s linear infinite;
+  color: rgba(0, 134, 238, 1);
+}

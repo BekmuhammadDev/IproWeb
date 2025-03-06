@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style-type: none;
+}
+
+@layer utilities {
+    .custom-scroll::-webkit-scrollbar {
+      width: 10px; /* Ingichka scroll */
+    }
+  
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #3a3a3a; /* Track orqa foni */
+      border-radius: 8px;
+    }
+  
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #a0a0a0; /* Scroll rangi */
+      border-radius: 8px;
+      border: 2px solid #3a3a3a; /* Yopishib qolmasligi uchun orqa fondan ajratish */
+    }
+  
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #d1d1d1; /* Hover bo‘lganda ochroq */
+    }
+  
+    /* Pastga va yuqoriga harakat yo‘lagi (scroll buttons) */
+    .custom-scroll::-webkit-scrollbar-button {
+      display: block;
+      height: 100px;
+    }
+  }
+
+  .circular-text {
+    animation: rotateText 40s linear infinite;
+  }
+  
+  @keyframes rotateText {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  body {
+    overflow-x: hidden; /* Sahifa bo‘ylab gorizontal scroll yo‘qoladi */
+  }
+  
+  
+  
+
