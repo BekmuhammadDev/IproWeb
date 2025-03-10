@@ -3,12 +3,10 @@ import { Listbox } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 import { viloyatlar } from "../mocks/mock";
 import { useTranslation } from "react-i18next";
-import "../i18";
-
+import "../i18.jsx";
 
 const ViloyatDropdown = ({ onChange }) => {
-
-    const { t } = useTranslation();
+  const { t } = useTranslation();
   const [selected, setSelected] = useState(viloyatlar[1]); // Default: Toshkent
 
   const handleSelect = (value) => {
@@ -19,7 +17,7 @@ const ViloyatDropdown = ({ onChange }) => {
   };
 
   return (
-    <div className="relative w-[300px] text-white">
+    <div className="relative w-full text-white">
       <Listbox value={selected} onChange={handleSelect}>
         <Listbox.Button className="flex items-center justify-between w-full h-[46px] px-4 py-2 bg-gray-800 rounded-[8px] hover:bg-gray-700 transition">
           {selected}
@@ -38,7 +36,9 @@ const ViloyatDropdown = ({ onChange }) => {
             >
               <span
                 className={`w-4 h-4 flex items-center justify-center border rounded-full ${
-                  selected === viloyat ? "border-blue-500 bg-blue-500" : "border-gray-400"
+                  selected === viloyat
+                    ? "border-blue-500 bg-blue-500"
+                    : "border-gray-400"
                 }`}
               >
                 {selected === viloyat && (

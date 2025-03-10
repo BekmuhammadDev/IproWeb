@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ChevronDown, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import "../i18";
+import "../i18.jsx";
 
 const LanguageDropdown = () => {
   const { i18n, t } = useTranslation();
@@ -31,10 +31,11 @@ const LanguageDropdown = () => {
     <div className="flex items-center gap-10">
       <button
         onClick={handleCardClick}
-        className="w-[180px] h-[40px] rounded-[8px] text-white bg-[#42a6f3f7] hover:bg-transparent hover:font-semibold hover:leading-3 hover:border-[1px] hover:border-solid hover:border-[#42a6f3f7] transition"
+        className="  w-[180px] h-[40px]  rounded-[8px] text-white bg-[#42a6f3f7] hidden xl:block hover:bg-transparent hover:font-semibold hover:leading-3 hover:border-[1px] hover:border-solid hover:border-[#42a6f3f7] transition"
       >
-        {t("contact")}
+        <h1>{t("contact")}</h1>
       </button>
+
       <div className="relative inline-block">
         <button
           onClick={() => setIsOpen(!isOpen)}

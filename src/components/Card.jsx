@@ -4,7 +4,6 @@ import Item from "./item";
 import { data } from "../mocks/mock";
 
 const Carousel = () => {
-
   const [angle, setAngle] = useState(0);
   const [velocity, setVelocity] = useState(2);
   const [isPaused, setIsPaused] = useState(false);
@@ -15,7 +14,7 @@ const Carousel = () => {
     const interval = setInterval(() => {
       if (isPaused) {
         if (vel > 0) {
-          vel -= 0.1; 
+          vel -= 0.1;
           setVelocity(vel);
         }
       } else {
@@ -31,7 +30,7 @@ const Carousel = () => {
 
   return (
     <div
-      className="carousel"
+      className="carousel hidden xl:flex"
       onMouseEnter={() => setIsPaused(true)} 
       onMouseLeave={() => setIsPaused(false)} 
     >

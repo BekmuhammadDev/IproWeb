@@ -15,7 +15,7 @@ const DegreeDropdown = ({ onChange }) => {
   };
 
   return (
-    <div className="relative w-[300px] text-white">
+    <div className="relative w-full text-white">
       <Listbox value={selected} onChange={handleSelect}>
         <Listbox.Button className="flex items-center justify-between w-full h-[46px] px-4 py-2 bg-gray-800 rounded-[8px] hover:bg-gray-700 transition">
           {selected}
@@ -34,7 +34,9 @@ const DegreeDropdown = ({ onChange }) => {
             >
               <span
                 className={`w-4 h-4 flex items-center justify-center border rounded-full ${
-                  selected === level ? "border-blue-500 bg-blue-500" : "border-gray-400"
+                  selected === level
+                    ? "border-blue-500 bg-blue-500"
+                    : "border-gray-400"
                 }`}
               >
                 {selected === level && (

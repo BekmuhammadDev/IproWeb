@@ -1,6 +1,6 @@
 const CircularText = () => {
     return (
-      <div className="flex items-center justify-center  absolute -right-32   w-[300px] h-[300px]">
+      <div className="flex items-center justify-center  absolute -right-[330px]   w-[300px] h-[300px]">
         <svg
           width="300"
           height="300"

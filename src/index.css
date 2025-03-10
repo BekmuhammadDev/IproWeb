@@ -56,6 +56,17 @@ li{
   body {
     overflow-x: hidden; /* Sahifa bo‘ylab gorizontal scroll yo‘qoladi */
   }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox uchun */
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
   
   
   

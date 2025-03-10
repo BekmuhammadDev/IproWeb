@@ -7,7 +7,10 @@ import WorkersPage from "./pages/WorkersPage";
 import VacancyPage from "./pages/VacancyPage";
 import AboutPage from "./pages/About";
 import { OpenCompany } from "./pages/OpenCompany";
+import Portfolio from "./pages/Porfolio"
 import "./App.css";
+import DetailPageCards from "./pages/DetailPageCards";
+import WrokerCardPage from "./pages/WorkerCardPage";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -38,11 +41,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/news" element={<NewsPage />} />
+            <Route path="/news/:id" element={<DetailPageCards />} />
+            <Route path="/news/card1" element={<OpenCompany />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/workers" element={<WorkersPage />} />
+            <Route path="/workers/:id" element={<WrokerCardPage />} />
             <Route path="/vacancy" element={<VacancyPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/opencompany" element={<OpenCompany />} />
+            <Route path="/portfolio" element={<Portfolio />} /> 
           </Routes>
         </Router>
       )}

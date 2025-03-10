@@ -331,6 +331,27 @@ export const jobList = [
   // Shu tarzda boshqa ish e'lonlarini qo'shish mumkin
 ];
 
+ export const job = {
+  title: "Frontend dasturchisi - VueJS, Javascript, React (Junior)",
+  schedule: "DUSHANBA - SHANBA",
+  time: "10:00 - 18:00",
+  salary: "5 000 000 - 20 000 000",
+};
+
+  // export const services = [
+  //   "Veb Dasturlash",
+  //   "Mobil Ilovalar",
+  //   "Dizayn Xizmatlari",
+  //   "SEO Optimizatsiya",
+  //   "Server va Hosting",
+  //   "Sun'iy Intellekt",
+  //   "Targeting",
+  //   "Blokcheyn Texnologiyalari",
+  //   "Kiberxavfsizlik",
+  //   "IT Konsalting",
+  // ];
+
+
 
 export const viloyatlar = [
   "Samarqand",

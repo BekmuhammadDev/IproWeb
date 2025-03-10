@@ -12,10 +12,15 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="py-[63px] px-10 bg-[#1D1D1D]">
-      <div className="flex gap-[165px]">
-        <img src={Logo} alt="Logo" />
-        <div className="flex gap-[102px] 2xl:gap-56">
+    <footer className="py-[63px] px-6 bg-[#1D1D1D]">
+      <div className="container mx-auto flex gap-20">
+        
+        <div className="hidden sm:flex">
+        <img src={Logo} alt="Logo" className="w-40 md:w-auto justify-items-start" />
+        </div>
+
+        <div className="flex flex-wrap  md:justify-between gap-10 w-full">
+          {/* Contact Info */}
           <div>
             <h1 className="text-white font-bold text-2xl">{t("contact")}</h1>
             <div className="flex gap-3 mt-3 font-semibold items-center">
@@ -32,68 +37,55 @@ export const Footer = () => {
             </div>
           </div>
 
+          {/* Links */}
           <div>
-            <h1 className="text-white text-center mb-2 font-bold text-2xl">
-              {t("links")}
-            </h1>
+            <h1 className="text-white mb-2 font-bold text-2xl">{t("links")}</h1>
             <ul>
-              <li className="mb-2">
-                <Link
-                  to={"/news"}
-                  className="text-white text-base hover:text-blue-600 font-semibold"
-                >
-                  {t("news")}
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to={"/services"}
-                  className="text-white text-base hover:text-blue-600 font-semibold"
-                >
-                  {t("services")}
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to={"/workers"}
-                  className="text-white text-base hover:text-blue-600 font-semibold"
-                >
-                  {t("workers")}
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to={"/vacancy"}
-                  className="text-white text-base hover:text-blue-600 font-semibold"
-                >
-                  {t("vacancies")}
-                </Link>
-              </li>
+              {["news", "services", "workers", "vacancies"].map((link, index) => (
+                <li key={index} className="mb-2">
+                  <Link
+                    to={`/${link}`}
+                    className="text-white text-base hover:text-blue-600 font-semibold"
+                  >
+                    {t(link)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h1 className="text-white mb-5 text-center font-bold text-2xl">
-              {t("social_media")}
-            </h1>
-            <div className="flex gap-3">
-              <div className="p-4 rounded-full bg-white hover:bg-black hover:text-white border cursor-pointer">
-                <FaYoutube fontSize={20} />
-              </div>
-              <div className="p-4 rounded-full bg-white hover:bg-black hover:text-white border cursor-pointer">
-                <FaInstagram fontSize={20} />
-              </div>
-              <div className="p-4 rounded-full bg-white hover:bg-black hover:text-white border cursor-pointer">
-                <FaFacebook fontSize={20} />
-              </div>
-              <div className="p-4 rounded-full bg-white hover:bg-black hover:text-white border cursor-pointer">
-                <PiTelegramLogo fontSize={20} />
-              </div>
-            </div>
-          </div>
+      {/* Social Media */}
+<div className="">
+  <h1 className="text-white mb-5 text-center font-bold text-2xl">
+    {t("social_media")}
+  </h1>
+  <div className="flex justify-center">
+    <div className="flex gap-3 justify-center">
+      {[
+        { Icon: FaYoutube, link: "https://www.youtube.com/@IPROUZ" },
+        { Icon: FaInstagram, link: "https://www.instagram.com/iprogroupuz/" },
+        { Icon: FaFacebook, link: "https://www.facebook.com" },
+        { Icon: PiTelegramLogo, link: "https://t.me/iPRO_group" }
+      ].map(({ Icon, link }, index) => (
+        <a
+          key={index}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-4 rounded-full bg-white hover:bg-black hover:text-white border cursor-pointer transition"
+        >
+          <Icon fontSize={20} />
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
         </div>
-        <ArrowTop />
+
+        <ArrowTop className="hidden md:block" />
       </div>
     </footer>
+
   );
 };
