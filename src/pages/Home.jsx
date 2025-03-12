@@ -38,7 +38,7 @@ import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import SplineViewer from "../components/spline.jsx";
 const Home = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -167,12 +167,15 @@ const Home = () => {
 
       {/* HeroSection */}
       <section id="Hero" className="w-full pt-60">
+
         <div className="w-full items-start justify-between px-10">
           <h1 className="text-white text-3xl font-bold mb-10">
             {t("hero_title")}
             <br />
             {t("hero_subtitle")}
           </h1>
+      <SplineViewer/>
+
           <div className="sm:flex sm:gap-5">
             <Link to={"/about"}>
               <button className="w-[180px] mb-5 h-[40px] cursor-pointer rounded-[8px] text-white bg-[#42a6f3f7] hover:bg-transparent hover:font-semibold hover:leading-3 hover:border-[1px] hover:border-solid hover:border-[#42a6f3f7] transition">
