@@ -24,6 +24,7 @@ function App() {
 
   return (
     <>
+      
       {loading ? (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-100">
           <video
@@ -49,11 +50,11 @@ function App() {
             <Route path="/vacancy" element={<VacancyPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/opencompany" element={<OpenCompany />} />
-            <Route path="/portfolio" element={<Portfolio />} /> 
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </Router>
       )}
-      
+
     </>
   );
 }

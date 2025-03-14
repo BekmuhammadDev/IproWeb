@@ -162,7 +162,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col ">
       <Navbar />
 
       {/* HeroSection */}
@@ -195,7 +195,7 @@ const Home = () => {
           {/* </div> */}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 hidden">
           <img className="w-full" src={EarthGlobal} alt="#" />
         </div>
       </section>
